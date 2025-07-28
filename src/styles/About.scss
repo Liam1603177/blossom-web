@@ -1,0 +1,53 @@
+.about-page {
+  padding: 4rem 2rem;
+  background-color: #fffafc;
+
+  .about-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--color-acento);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+
+  .about-image {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .about-extra {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

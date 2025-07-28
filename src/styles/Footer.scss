@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--color-acento);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  border-top: 1px solid #ddd;
+
+  .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      color: var(--color-texto);
+      font-size: 1.4rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-acento);
+      }
+    }
+  }
+}

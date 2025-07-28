@@ -1,0 +1,18 @@
+{
+  "tortas": [
+    { "id": 1, "nombre": "Cheesecake de frutilla", "imagen": "/images/tortas/cheesecake.jpg" },
+    { "id": 2, "nombre": "Torta Oreo", "imagen": "/images/tortas/oreo.webp" }
+  ],
+  "cookies": [
+    { "id": 3, "nombre": "Cookie doble chocolate", "imagen": "/images/cookies/doblechoco.jpg" },
+    { "id": 4, "nombre": "Cookie con chips", "imagen": "/images/cookies/chips.jpg" }
+  ],
+  "almuerzo": [
+    { "id": 5, "nombre": "Sandwich veggie", "imagen": "/images/almuerzo/sandwich.avif" },
+    { "id": 6, "nombre": "Ensalada fresca", "imagen": "/images/almuerzo/ensalada.jpg" }
+  ],
+  "bebidas": [
+    { "id": 7, "nombre": "Exprimido de naranja", "imagen": "/images/bebidas/exprimido.webp" },
+    { "id": 8, "nombre": "Limonada con menta", "imagen": "/images/bebidas/limonada.webp" }
+  ]
+}
