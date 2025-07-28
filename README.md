@@ -1,12 +1,42 @@
-# React + Vite
+# 🌸 Blossom Confitería
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web profesional desarrollado para Blossom, una confitería artesanal ubicada en Bahía Blanca. Este proyecto fue creado como parte de mi portfolio como desarrollador Full Stack.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sitio responsive y moderno
+- Secciones: Inicio, Menú, Nosotros, Contacto y Reservas
+- Sistema de reservas con formulario validado
+- Navbar con menú hamburguesa en mobile
+- Footer con redes sociales
+- Animaciones suaves al hacer scroll
+- Diseño adaptado a la estética de la marca
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- React Router DOM
+- SCSS
+- React Icons
+- AOS (Animate On Scroll)
+- Git y GitHub
+- Despliegue en Vercel
+
+## 📸 Capturas
+
+![Home](./public/images/readme-home.jpg)
+![Menú](./public/images/readme-menu.jpg)
+
+## 🚀 Demo online
+
+👉 Accedé a la web publicada en: https://blossom.vercel.app
+
+(Actualizá el link cuando lo publiques)
+
+## 👨‍💻 Autor
+
+Desarrollado por Ignacio Daddario  
+📧 ignaciodaddario@gmail.com  
+📱 291-000-0000  
+🔗 www.linkedin.com/in/ignacio-dev
+
