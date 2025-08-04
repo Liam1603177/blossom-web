@@ -5,11 +5,20 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 10;
 
   .logo {
     font-weight: bold;
     font-size: 1.5rem;
+    color: var(--color-crema);
+    text-shadow: 0 0 5px #333;
+    margin-left: 3rem;
+  }
+
+  .logo span {
     color: var(--color-texto);
+    font-size: 1.5rem;
+    font-weight: normal;
   }
 
   .menu-icon {
@@ -42,10 +51,12 @@
       width: 100%;
       padding: 1rem;
       display: none;
+    }
+  }
 
-      &.active {
-        display: flex;
-      }
+  .nav-links.active {
+    @media (max-width: 768px) {
+      display: flex;
     }
   }
 }

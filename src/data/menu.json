@@ -1,7 +1,11 @@
 {
   "tortas": [
-    { "id": 1, "nombre": "Cheesecake de frutilla", "imagen": "/images/tortas/cheesecake.jpg" },
-    { "id": 2, "nombre": "Torta Oreo", "imagen": "/images/tortas/oreo.webp" }
+    { "id": 1, "nombre": "Chocotorta", "imagen": "/images/tortas/choco.jpeg" },
+    { "id": 2, "nombre": "Veganette", "imagen": "/images/tortas/veganette.jpeg" },
+    { "id": 3, "nombre": "Franui", "imagen": "/images/tortas/franui.jpeg" },
+    { "id": 4, "nombre": "Carrot", "imagen": "/images/tortas/carrot.jpeg" },
+    { "id": 1, "nombre": "Red Velvet", "imagen": "/images/tortas/velvet.jpeg" },
+    { "id": 2, "nombre": "Invidual Vasca", "imagen": "/images/tortas/vasca.jpeg" }
   ],
   "cookies": [
     { "id": 3, "nombre": "Cookie doble chocolate", "imagen": "/images/cookies/doblechoco.jpg" },

@@ -4,9 +4,9 @@ import '../styles/MenuPreview.scss'
 export default function MenuPreview() {
   // Productos simulados por ahora, más adelante los podemos traer desde un JSON o backend
 const destacados = [
-  { id: 1, nombre: 'Cheesecake de frutos rojos', imagen: '/images/blossom.jpg' },
-  { id: 2, nombre: 'Croissant de almendras', imagen: '/images/croissant.jpg' },
-  { id: 3, nombre: 'Tostadas con palta', imagen: '/images/palta.jpg' },
+  { id: 1, nombre: '🎂 Tortas', imagen: '/images/tortas/carrot.jpeg' },
+  { id: 2, nombre: '🥐Desayunos', imagen: '/images/cafe.jpg' },
+  { id: 3, nombre: '🍽️Almuerzos', imagen: '/images/almuerzo/sandwich.avif' },
 ]
 
   return (

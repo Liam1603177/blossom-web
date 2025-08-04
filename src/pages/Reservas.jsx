@@ -27,7 +27,7 @@ export default function Reservas() {
 
 
   return (
-    <section className="reservas-page">
+    <main className="reservas-page">
       <h1>Reservá tu mesa</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -70,6 +70,6 @@ export default function Reservas() {
         />
         <button type="submit">Reservar</button>
       </form>
-    </section>
+    </main>
   )
 }

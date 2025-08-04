@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1 className="logo">BLOSSOM</h1>
+      <h1 className="logo"> Blossom <span>Bakery</span></h1>
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? <FiX /> : <FiMenu />}
       </div>

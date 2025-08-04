@@ -2,7 +2,7 @@ import '../styles/Contact.scss'
 
 export default function Contact() {
   return (
-    <section className="contact-page">
+    <main className="contact-page">
       <h1>Contacto</h1>
       <div className="contact-container">
         <div className="contact-info">
@@ -24,6 +24,6 @@ export default function Contact() {
           ></iframe>
         </div>
       </div>
-    </section>
+    </main>
   )
 }
