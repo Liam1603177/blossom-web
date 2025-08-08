@@ -1,22 +1,171 @@
 {
   "tortas": [
-    { "id": 1, "nombre": "Chocotorta", "imagen": "/images/tortas/choco.jpeg" },
-    { "id": 2, "nombre": "Veganette", "imagen": "/images/tortas/veganette.jpeg" },
-    { "id": 3, "nombre": "Franui", "imagen": "/images/tortas/franui.jpeg" },
-    { "id": 4, "nombre": "Carrot", "imagen": "/images/tortas/carrot.jpeg" },
-    { "id": 1, "nombre": "Red Velvet", "imagen": "/images/tortas/velvet.jpeg" },
-    { "id": 2, "nombre": "Invidual Vasca", "imagen": "/images/tortas/vasca.jpeg" }
+    {
+      "id": 1,
+      "nombre": "Chocotorta",
+      "imagen": "/images/tortas/choco.jpeg",
+      "descripcion": "Clásica chocotorta de la casa, cremosa, con dulce de leche y galletitas de chocolate.",
+      "ingredientes": ["Galletitas de chocolate", "Dulce de leche", "Queso crema"],
+      "precio": 5500
+    },
+    {
+      "id": 2,
+      "nombre": "Veganette",
+      "imagen": "/images/tortas/veganette.jpeg",
+      "descripcion": "Torta 100% vegana: cacao intenso, crema vegetal y frutos secos.",
+      "ingredientes": ["Harina integral", "Cacao", "Leche vegetal", "Frutos secos"],
+      "precio": 6000
+    },
+    {
+      "id": 3,
+      "nombre": "Franui",
+      "imagen": "/images/tortas/franui.jpeg",
+      "descripcion": "Base húmeda de vainilla, mousse de chocolate blanco y frambuesas frescas.",
+      "ingredientes": ["Bizcochuelo de vainilla", "Mousse de chocolate blanco", "Frambuesas", "Merengue"],
+      "precio": 6800
+    },
+    {
+      "id": 4,
+      "nombre": "Carrot",
+      "imagen": "/images/tortas/carrot.jpeg",
+      "descripcion": "Torta húmeda de zanahoria, rellena y cubierta con crema de queso.",
+      "ingredientes": ["Zanahoria", "Nueces", "Especias", "Queso crema"],
+      "precio": 5900
+    },
+    {
+      "id": 5,
+      "nombre": "Red Velvet",
+      "imagen": "/images/tortas/velvet.jpeg",
+      "descripcion": "Bizcochuelo rojo aterciopelado con crema de queso dulce y suave.",
+      "ingredientes": ["Harina", "Cacao", "Colorante rojo", "Queso crema"],
+      "precio": 6100
+    },
+    {
+      "id": 6,
+      "nombre": "Invidual Vasca",
+      "imagen": "/images/tortas/vasca.jpeg",
+      "descripcion": "Mini tarta vasca de queso con costra dorada y centro cremoso.",
+      "ingredientes": ["Queso crema", "Azúcar", "Huevos", "Harina"],
+      "precio": 2100
+    },
+    {
+      "id": 7,
+      "nombre": "Doble Mouse",
+      "imagen": "/images/tortas/doble-mouse.jpeg",
+      "descripcion": "Torta de dos mousses: chocolate semiamargo y blanco, en base de galletitas.",
+      "ingredientes": ["Mousse de chocolate blanco", "Mousse de chocolate semiamargo", "Galletitas"],
+      "precio": 6200
+    }
   ],
   "cookies": [
-    { "id": 3, "nombre": "Cookie doble chocolate", "imagen": "/images/cookies/doblechoco.jpg" },
-    { "id": 4, "nombre": "Cookie con chips", "imagen": "/images/cookies/chips.jpg" }
+    {
+      "id": 8,
+      "nombre": "Cookie doble Chocolate",
+      "imagen": "/images/cookies/Cookie-choco.jpeg",
+      "descripcion": "Cookie extra grande con doble chocolate y chips.",
+      "ingredientes": ["Harina", "Cacao", "Chips de chocolate", "Manteca"],
+      "precio": 1200
+    },
+    {
+      "id": 9,
+      "nombre": "Cookie con Chips",
+      "imagen": "/images/cookies/Cookie-chips.jpeg",
+      "descripcion": "Cookie tradicional, crocante por fuera y blanda en el centro.",
+      "ingredientes": ["Harina", "Manteca", "Azúcar", "Chips de chocolate"],
+      "precio": 1100
+    },
+    {
+      "id": 10,
+      "nombre": "Cookie de Limon",
+      "imagen": "/images/cookies/Cookie-limon.jpeg",
+      "descripcion": "Galleta suave sabor limón, con un toque cítrico y glaseado.",
+      "ingredientes": ["Harina", "Limón", "Azúcar", "Manteca"],
+      "precio": 1100
+    },
+    {
+      "id": 11,
+      "nombre": "Cookie de pomelo",
+      "imagen": "/images/cookies/Cookie-pomelo.jpeg",
+      "descripcion": "Cookie innovadora, saborizada naturalmente con pomelo.",
+      "ingredientes": ["Harina", "Jugo de pomelo", "Azúcar", "Manteca"],
+      "precio": 1100
+    },
+    {
+      "id": 12,
+      "nombre": "Cookie Red",
+      "imagen": "/images/cookies/Cookie-red.jpeg",
+      "descripcion": "Cookie roja tipo red velvet, rellena con chips de chocolate blanco.",
+      "ingredientes": ["Harina", "Cacao", "Colorante rojo", "Chips de chocolate blanco"],
+      "precio": 1200
+    }
   ],
   "almuerzo": [
-    { "id": 5, "nombre": "Sandwich veggie", "imagen": "/images/almuerzo/sandwich.avif" },
-    { "id": 6, "nombre": "Ensalada fresca", "imagen": "/images/almuerzo/ensalada.jpg" }
+    {
+      "id": 13,
+      "nombre": "Sandwich veggie",
+      "imagen": "/images/almuerzo/sandwich.avif",
+      "descripcion": "Sandwich de pan casero con vegetales asados, palta y brotes.",
+      "ingredientes": ["Pan artesanal", "Berenjena", "Zucchini", "Palta", "Brotes"],
+      "precio": 3500
+    },
+    {
+      "id": 14,
+      "nombre": "Ensalada Caesar",
+      "imagen": "/images/almuerzo/ensalada.jpg",
+      "descripcion": "Clásica Caesar con pollo grillado, croutons y parmesano.",
+      "ingredientes": ["Lechuga", "Pollo", "Croutons", "Queso parmesano", "Aderezo Caesar"],
+      "precio": 3300
+    },
+    {
+      "id": 15,
+      "nombre": "Lasagña",
+      "imagen": "/images/almuerzo/lasagna.jpeg",
+      "descripcion": "Porción de lasagña casera con salsa boloñesa y bechamel.",
+      "ingredientes": ["Pasta", "Carne", "Salsa bechamel", "Queso", "Tomate"],
+      "precio": 3900
+    },
+    {
+      "id": 16,
+      "nombre": "Croque Madame",
+      "imagen": "/images/almuerzo/madame.jpeg",
+      "descripcion": "Sandwich tostado con jamón, queso, huevo y salsa bechamel.",
+      "ingredientes": ["Pan de campo", "Jamón", "Queso", "Huevo", "Bechamel"],
+      "precio": 3500
+    },
+    {
+      "id": 17,
+      "nombre": "Curry con Arroz",
+      "imagen": "/images/almuerzo/curry.jpeg",
+      "descripcion": "Curry suave de verduras y pollo acompañado de arroz blanco.",
+      "ingredientes": ["Pollo", "Vegetales", "Curry", "Arroz"],
+      "precio": 3800
+    },
+    {
+      "id": 18,
+      "nombre": "Tortilla con Jamon Crudo",
+      "imagen": "/images/almuerzo/tortilla.jpeg",
+      "descripcion": "Clásica tortilla de papas rellena con jamón crudo.",
+      "ingredientes": ["Papa", "Huevo", "Jamón crudo", "Cebolla"],
+      "precio": 3300
+    }
   ],
-  "bebidas": [
-    { "id": 7, "nombre": "Exprimido de naranja", "imagen": "/images/bebidas/exprimido.webp" },
-    { "id": 8, "nombre": "Limonada con menta", "imagen": "/images/bebidas/limonada.webp" }
+  "cupcake": [
+    {
+      "id": 19,
+      "nombre": "Cupcake con frutos rojos",
+      "imagen": "/images/cupcake/cupcake- frutos-rojos.jpeg",
+      "descripcion": "Cupcake de vainilla con frutos rojos frescos y crema chantilly.",
+      "ingredientes": ["Harina", "Huevos", "Frutos rojos", "Azúcar", "Crema chantilly"],
+      "precio": 1100
+    },
+    {
+      "id": 20,
+      "nombre": "Cupcake con arandanos",
+      "imagen": "/images/cupcake/cupcake-arandano.jpeg",
+      "descripcion": "Cupcake esponjoso de arándanos, decorado con frosting de queso.",
+      "ingredientes": ["Harina", "Arándanos", "Huevos", "Queso crema", "Azúcar"],
+      "precio": 1100
+    }
   ]
 }
+

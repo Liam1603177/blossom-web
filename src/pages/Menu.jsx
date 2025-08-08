@@ -1,5 +1,6 @@
 import menuData from '../data/menu.json'
 import '../styles/Menu.scss'
+import { Link } from "react-router-dom"
 
 export default function Menu() {
   return (
@@ -11,10 +12,10 @@ export default function Menu() {
           <h2>{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h2>
           <div className="menu-grid">
             {productos.map((prod) => (
-              <div key={prod.id} className="menu-card">
+              <Link key={prod.id} to={`/menu/${prod.id}`} className="menu-card">
                 <img src={prod.imagen} alt={prod.nombre} />
                 <h3>{prod.nombre}</h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
