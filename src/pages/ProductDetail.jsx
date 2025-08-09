@@ -3,6 +3,7 @@ import menuData from '../data/menu.json'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import { useCart } from "../context/CartContext"
+import toast from "react-hot-toast"
 
 export default function ProductDetail() {
   const { id } = useParams()
@@ -88,6 +89,7 @@ export default function ProductDetail() {
         }}
         onClick={() => {
           add(producto, 1)
+          toast.success(`${producto.nombre} agregado al carrito`)
           window.dispatchEvent(new CustomEvent("open-cart"))
         }}
       >

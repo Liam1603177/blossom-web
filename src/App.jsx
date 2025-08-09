@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Reservas from "./pages/Reservas";
 import ProductDetail from "./pages/ProductDetail";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />   {/* <- agrega esta */}
+          <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/:id" element={<ProductDetail />} />
           <Route path="/nosotros" element={<About />} />
@@ -32,6 +33,7 @@ export default function App() {
       <Footer />
       <CartDrawer />
       <WhatsappFloat />
+      <Toaster position="top-center" />
     </div>
   );
 }

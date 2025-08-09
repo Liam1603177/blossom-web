@@ -5,7 +5,10 @@
   transform: translateX(110%); transition: transform .25s ease;
   display: flex; flex-direction: column;
 
-  &.open { transform: translateX(0); }
+  &.open { 
+    transform: translateX(0);
+    animation: cartIn .22s ease;
+  }
 
   .header { display:flex; justify-content:space-between; align-items:center;
     padding:1rem; border-bottom:1px solid #eee;
@@ -34,5 +37,31 @@
         &.disabled { pointer-events:none; opacity:.5; }
       }
     }
+  }
+}
+
+@keyframes cartIn {
+  from { transform: translateX(20px); opacity: .85; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.checkout {
+  border-top: 1px solid #eee;
+  padding: .8rem 1rem;
+  display: grid;
+  gap: .5rem;
+
+  input, select, textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: .55rem .7rem;
+    background: #fafafa;
+    font: inherit;
+  }
+  .row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
   }
 }
