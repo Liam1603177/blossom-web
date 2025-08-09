@@ -1,0 +1,38 @@
+.cart-drawer {
+  position: fixed; top: 0; right: 0; height: 100vh;
+  width: min(92vw, 380px); background: #fff; z-index: 1100;
+  box-shadow: -8px 0 24px rgba(0,0,0,.1);
+  transform: translateX(110%); transition: transform .25s ease;
+  display: flex; flex-direction: column;
+
+  &.open { transform: translateX(0); }
+
+  .header { display:flex; justify-content:space-between; align-items:center;
+    padding:1rem; border-bottom:1px solid #eee;
+    button { background:none; border:0; font-size:1.4rem; cursor:pointer; }
+  }
+
+  .content { flex:1; overflow:auto; padding:.75rem 1rem; }
+  .row { display:grid; grid-template-columns:64px 1fr auto; gap:.75rem; align-items:center;
+    padding:.5rem 0; border-bottom:1px solid #f2f2f2;
+    img { width:64px; height:64px; object-fit:cover; border-radius:8px; }
+    .info { display:grid; gap:.25rem;
+      .qty { display:inline-flex; gap:.25rem; align-items:center;
+        button { width:28px; height:28px; border:1px solid #ddd; background:#fafafa; border-radius:6px; cursor:pointer; }
+        input { width:48px; text-align:center; border:1px solid #ddd; border-radius:6px; padding:.25rem; }
+      }
+    }
+    .remove { background:none; border:0; color:#c03; cursor:pointer; font-size:1.1rem; }
+  }
+
+  .footer { border-top:1px solid #eee; padding:1rem; display:grid; gap:.75rem;
+    .totals { display:flex; justify-content:space-between; }
+    .actions { display:flex; gap:.5rem;
+      .muted { flex:1; background:#f0f0f0; border:0; border-radius:10px; padding:.7rem; cursor:pointer; }
+      .whatsapp { flex:2; text-align:center; background:#25d366; color:#fff;
+        padding:.7rem; border-radius:10px; text-decoration:none; font-weight:700;
+        &.disabled { pointer-events:none; opacity:.5; }
+      }
+    }
+  }
+}

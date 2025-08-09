@@ -59,4 +59,25 @@
       display: flex;
     }
   }
+
+  .cart-btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--color-texto);
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background: #d81159;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      line-height: 1;
+    }
+  }
 }

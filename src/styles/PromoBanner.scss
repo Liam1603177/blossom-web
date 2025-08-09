@@ -1,0 +1,31 @@
+.promo-banner {
+  color: #fff;
+  text-align: center;
+  padding: .6rem 3.5rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  position: sticky;
+  top: 0; /* queda fijo al hacer scroll, arriba del contenido */
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+
+  p { margin: 0; }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: .9;
+  }
+  .prev { left: 12px; }
+  .next { right: 12px; }
+}

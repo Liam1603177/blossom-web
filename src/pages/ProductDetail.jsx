@@ -2,9 +2,11 @@ import { useParams, Link } from 'react-router-dom'
 import menuData from '../data/menu.json'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
+import { useCart } from "../context/CartContext"
 
 export default function ProductDetail() {
   const { id } = useParams()
+  const { add } = useCart()
 
   // Buscar el producto por ID en todas las categorías
   let producto
@@ -81,13 +83,35 @@ export default function ProductDetail() {
           fontWeight: "bold",
           boxShadow: "0 2px 8px #d9a1a150",
           cursor: "pointer",
+          transition: "background 0.2s",
+          marginRight: "1rem"
+        }}
+        onClick={() => {
+          add(producto, 1)
+          window.dispatchEvent(new CustomEvent("open-cart"))
+        }}
+      >
+        Agregar al carrito
+      </button>
+      <a
+        href={`https://wa.me/5492915088400?text=Hola! Quiero pedir una porción de ${producto.nombre}.`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-block',
+          margin: '1.5rem 0 0',
+          background: "#25d366",
+          color: "#fff",
+          borderRadius: 30,
+          padding: "0.7rem 2rem",
+          fontWeight: "bold",
+          textDecoration: "none",
+          boxShadow: "0 2px 8px #25d36633",
           transition: "background 0.2s"
         }}
-        onMouseOver={e => e.currentTarget.style.background = "#a17777"}
-        onMouseOut={e => e.currentTarget.style.background = "#d9a1a1"}
       >
-        Ordenar
-      </button>
+        💬 Ordenar por WhatsApp
+      </a>
       <div style={{ marginTop: "1.5rem" }}>
         <Link to="/menu" style={{ color: "#d9a1a1", textDecoration: "underline", fontWeight: 600 }}>Volver al menú</Link>
       </div>

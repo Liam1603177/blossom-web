@@ -1,0 +1,8 @@
+[
+  { "id": 1, "texto": "🌟 Especial del día: Carrot Cake + Café $6500", "color": "#caa6a6" },
+  { "id": 2, "texto": "🧁 2 Cupcakes + Latte $4200", "color": "#b88f8f" },
+  { "id": 3, "texto": "☕ Happy Hour: 2x1 en cappuccino de 16 a 18hs", "color": "#b88f8f" },
+  { "id": 4, "texto": "🍰 Pastel del mes: Tarta de Limón $3500", "color": "#a77a7a" },
+  { "id": 5, "texto": "🥐 Combo Desayuno: Croissant + Café $3000", "color": "#9c6b6b" },
+  { "id": 6, "texto": "🍪 Cookies recién horneadas: 3x2", "color": "#8f5e5e" }
+]

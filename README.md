@@ -29,14 +29,12 @@ Sitio web profesional desarrollado para Blossom, una confitería artesanal ubica
 
 ## 🚀 Demo online
 
-👉 Accedé a la web publicada en: https://blossom.vercel.app
-
-(Actualizá el link cuando lo publiques)
+👉 Accedé a la web publicada en: https://blossom-web-puce.vercel.app/
 
 ## 👨‍💻 Autor
 
 Desarrollado por Ignacio Daddario  
 📧 ignaciodaddario@gmail.com  
 📱 291-000-0000  
-🔗 www.linkedin.com/in/ignacio-dev
+🔗 https://www.linkedin.com/in/ignacio-daddario
 

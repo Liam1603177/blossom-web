@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX, FiShoppingCart } from 'react-icons/fi'
+import { useCart } from '../context/CartContext'
 import '../styles/Navbar.scss'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { count } = useCart()
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
+  const toggleMenu = () => setMenuOpen(!menuOpen)
 
   return (
     <nav className="navbar">
-      <h1 className="logo"> Blossom <span>Bakery</span></h1>
+      <h1 className="logo">🌸 Blossom <span>Bakery</span></h1>
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? <FiX /> : <FiMenu />}
       </div>
@@ -23,6 +23,14 @@ export default function Navbar() {
         <li><Link to="/contacto" onClick={toggleMenu}>Contacto</Link></li>
         <li><Link to="/reservas" onClick={toggleMenu}>Reservas</Link></li>
       </ul>
+      <button
+        className="cart-btn"
+        onClick={() => window.dispatchEvent(new CustomEvent("open-cart"))}
+        aria-label="Abrir carrito"
+      >
+        <FiShoppingCart />
+        {count > 0 && <span className="badge">{count}</span>}
+      </button>
     </nav>
   )
 }
