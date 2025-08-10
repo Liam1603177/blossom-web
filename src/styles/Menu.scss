@@ -81,13 +81,13 @@
         /* Botón agregar rápido */
         .add-mini {
           position: absolute;
-          bottom: 0.6rem;
-          right: 0.6rem;
+          bottom: .6rem;
+          right: .6rem;
           background: #d9a1a1;
           color: #fff;
           border: none;
           border-radius: 999px;
-          padding: 0.38rem .9rem;
+          padding: .38rem .9rem;
           font-size: .9rem;
           font-weight: 700;
           box-shadow: 0 2px 8px #3d2b2b50;
@@ -96,6 +96,14 @@
 
           &:hover { background: #a17777; transform: scale(1.07); }
           &:active { background: #c77b7b; transform: scale(0.97); }
+
+          @media (max-width: 560px) {
+            bottom: .4rem;
+            right: .4rem;
+            padding: .25rem .65rem;
+            font-size: .78rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,.12);
+          }
 
           @media (min-width: 768px) {
             bottom: 0.8rem; right: 0.8rem;

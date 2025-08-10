@@ -1,10 +1,12 @@
-.footer {
-  background-color: var(--color-acento);
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-texto);
-  border-top: 1px solid #ddd;
+footer {
+  margin-top: 2rem;
+  padding: 1.25rem 1rem;
+  background: var(--color-acento);
+  color: #222020;
+
+  @media (max-width: 560px) {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
 
   .social-icons {
     margin-top: 1rem;

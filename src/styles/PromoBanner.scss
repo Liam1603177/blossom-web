@@ -1,17 +1,22 @@
 .promo-banner {
   color: #fff;
-  text-align: center;
-  padding: .6rem 3.5rem;
-  font-weight: 600;
-  letter-spacing: .3px;
   position: sticky;
-  top: 0; /* queda fijo al hacer scroll, arriba del contenido */
-  z-index: 999;
-
+  top: 0;
+  z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: .6rem 3.5rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  text-align: center;
   gap: .75rem;
+
+  .viewport {
+    min-height: 1.4rem;
+    display: flex;
+    align-items: center;
+  }
 
   p { margin: 0; }
 

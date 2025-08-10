@@ -1,11 +1,25 @@
 .navbar {
-  background-color: var(--color-crema);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: var(--color-acento);
+  backdrop-filter: saturate(120%) blur(2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: .7rem 1rem; /* mobile */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 768px) {
+    .inner {
+      padding: .9rem 1.25rem;
+    }
+  }
 
   .logo {
     font-weight: bold;
