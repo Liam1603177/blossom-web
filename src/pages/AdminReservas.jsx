@@ -9,11 +9,19 @@ export default function AdminReservas() {
 
   function cargar() {
     fetch(`${API}/reservations`, {
-      headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
+      headers: { "Authorization": `Bearer ${localStorage.getItem("admintoken")}` }
     })
-      .then(r => r.json())
+      .then(async r => {
+        if (!r.ok) {
+          const err = await r.text();
+          throw new Error(err || `Error ${r.status}`);
+        }
+        return r.json();
+      })
       .then(d => setItems(d.items || []))
-      .catch(console.error);
+      .catch(e => {
+        toast.error(e.message || "Error al cargar reservas");
+      });
   }
 
   useEffect(() => { cargar(); }, []);
@@ -23,9 +31,12 @@ export default function AdminReservas() {
     try {
       const res = await fetch(`${API}/reservations/${id}`, {
         method: "DELETE",
-        headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
+        headers: { "Authorization": `Bearer ${localStorage.getItem("admintoken")}` }
       });
-      if (!res.ok) throw new Error("No se pudo borrar");
+      if (!res.ok) {
+        const err = await res.text();
+        throw new Error(err || "No se pudo borrar");
+      }
       toast.success("Reserva eliminada");
       cargar();
     } catch (err) {
