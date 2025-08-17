@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Reservas from "./pages/Reservas";
 import ProductDetail from "./pages/ProductDetail";
+
+import AdminLogin from "./pages/AdminLogin";
+import AdminPanel from "./pages/AdminPanel";
 import { Toaster } from "react-hot-toast";
 
 export default function App() {
@@ -27,6 +30,8 @@ export default function App() {
           <Route path="/nosotros" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/reservas" element={<Reservas />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/panel" element={<AdminPanel />} />
         </Routes>
       </main>
 

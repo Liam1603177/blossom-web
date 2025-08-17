@@ -1,19 +1,42 @@
-import { useParams, Link } from 'react-router-dom'
-import menuData from '../data/menu.json'
+import { useParams, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion'
-import { useCart } from "../context/CartContext"
-import toast from "react-hot-toast"
+import { motion } from "framer-motion";
+import { useCart } from "../context/CartContext";
+import toast from "react-hot-toast";
+
+const API = import.meta.env.VITE_API_URL; // ej: http://localhost:4000/api
 
 export default function ProductDetail() {
-  const { id } = useParams()
-  const { add } = useCart()
+  const { id } = useParams();                 // id = _id de Mongo
+  const { add } = useCart();
+  const [producto, setProducto] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Buscar el producto por ID en todas las categorías
-  let producto
-  for (const categoria of Object.values(menuData)) {
-    producto = categoria.find(item => String(item.id) === id)
-    if (producto) break
+  useEffect(() => {
+    let alive = true;
+    setLoading(true);
+
+    fetch(`${API}/products/${id}`)
+      .then(async (r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const p = await r.json();
+        // Normalizo _id -> id para que el carrito funcione igual
+        const norm = { ...p, id: p._id, precio: Number(p.precio || 0) };
+        if (alive) setProducto(norm);
+      })
+      .catch(() => alive && setProducto(null))
+      .finally(() => alive && setLoading(false));
+
+    return () => { alive = false; };
+  }, [id]);
+
+  if (loading) {
+    return (
+      <section style={{ textAlign: "center", margin: "4rem 0" }}>
+        <h2>Cargando…</h2>
+      </section>
+    );
   }
 
   if (!producto) {
@@ -21,13 +44,19 @@ export default function ProductDetail() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        style={{ textAlign: 'center', margin: '4rem 0' }}
+        style={{ textAlign: "center", margin: "4rem 0" }}
       >
         <h2>Producto no encontrado</h2>
-        <Link to="/menu" style={{ color: "#d9a1a1", textDecoration: "underline" }}>Volver al menú</Link>
+        <Link to="/menu" style={{ color: "#d9a1a1", textDecoration: "underline" }}>
+          Volver al menú
+        </Link>
       </motion.div>
-    )
+    );
   }
+
+  const msgWA = encodeURIComponent(
+    `¡Hola! Quiero pedir una porción de ${producto.nombre} de Blossom.`
+  );
 
   return (
     <motion.div
@@ -54,25 +83,27 @@ export default function ProductDetail() {
           objectFit: "cover"
         }}
       />
+
       <h2 style={{ margin: "0 0 0.5rem" }}>{producto.nombre}</h2>
-      {/* Opcional: descripción si está en tu JSON */}
+
       {producto.descripcion && (
         <p style={{ margin: "0.5rem 0 1.5rem", color: "#555" }}>{producto.descripcion}</p>
       )}
-      {/* Opcional: ingredientes */}
-      {producto.ingredientes && (
+
+      {Array.isArray(producto.ingredientes) && producto.ingredientes.length > 0 && (
         <ul style={{ textAlign: "left", margin: "0 auto 1.5rem", maxWidth: 320, color: "#444" }}>
           {producto.ingredientes.map((ing, i) => (
             <li key={i}>{ing}</li>
           ))}
         </ul>
       )}
-      {/* Opcional: precio */}
-      {producto.precio && (
+
+      {producto.precio > 0 && (
         <div style={{ fontSize: "1.2rem", margin: "1rem 0", color: "#d9a1a1", fontWeight: "bold" }}>
           ${producto.precio}
         </div>
       )}
+
       <button
         style={{
           background: "#d9a1a1",
@@ -88,20 +119,21 @@ export default function ProductDetail() {
           marginRight: "1rem"
         }}
         onClick={() => {
-          add(producto, 1)
-          toast.success(`${producto.nombre} agregado al carrito`)
-          window.dispatchEvent(new CustomEvent("open-cart"))
+          add(producto, 1);
+          toast.success(`${producto.nombre} agregado al carrito`);
+          window.dispatchEvent(new CustomEvent("open-cart"));
         }}
       >
         Agregar al carrito
       </button>
+
       <a
-        href={`https://wa.me/5492915088400?text=Hola! Quiero pedir una porción de ${producto.nombre}.`}
+        href={`https://wa.me/5492915088400?text=${msgWA}`}
         target="_blank"
         rel="noopener noreferrer"
         style={{
-          display: 'inline-block',
-          margin: '1.5rem 0 0',
+          display: "inline-block",
+          margin: "1.5rem 0 0",
           background: "#25d366",
           color: "#fff",
           borderRadius: 30,
@@ -114,9 +146,12 @@ export default function ProductDetail() {
       >
         💬 Ordenar por WhatsApp
       </a>
+
       <div style={{ marginTop: "1.5rem" }}>
-        <Link to="/menu" style={{ color: "#d9a1a1", textDecoration: "underline", fontWeight: 600 }}>Volver al menú</Link>
+        <Link to="/menu" style={{ color: "#d9a1a1", textDecoration: "underline", fontWeight: 600 }}>
+          Volver al menú
+        </Link>
       </div>
     </motion.div>
-  )
+  );
 }
