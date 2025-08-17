@@ -13,6 +13,7 @@ import ProductDetail from "./pages/ProductDetail";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminPanel from "./pages/AdminPanel";
+import AdminReservas from "./pages/AdminReservas";
 import { Toaster } from "react-hot-toast";
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/reservas" element={<Reservas />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/admin/panel" element={<AdminPanel />} />
+          <Route path="/admin/reservas" element={<AdminReservas />} />
         </Routes>
       </main>
 
