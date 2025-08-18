@@ -10,10 +10,13 @@ export default function AdminReservas() {
 
 
   function cargar() {
+    const token = localStorage.getItem("admintoken");
+    console.log("Token admin usado:", token);
     fetch(`${API}/reservations`, {
-      headers: { "Authorization": `Bearer ${localStorage.getItem("admintoken")}` }
+      headers: { "Authorization": `Bearer ${token}` }
     })
       .then(async r => {
+        console.log("Status respuesta reservas:", r.status);
         if (!r.ok) {
           const err = await r.text();
           throw new Error(err || `Error ${r.status}`);
