@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const API = import.meta.env.VITE_API_URL;
 
 export default function AdminReservas() {
   const [items, setItems] = useState([]);
+  const nav = useNavigate();
 
 
   function cargar() {
@@ -27,7 +29,10 @@ export default function AdminReservas() {
       });
   }
 
-  useEffect(() => { cargar(); }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("admintoken")) nav("/admin");
+    else cargar();
+  }, [nav]);
 
   async function borrarReserva(id) {
     if (!window.confirm("¿Seguro que querés borrar esta reserva?")) return;
