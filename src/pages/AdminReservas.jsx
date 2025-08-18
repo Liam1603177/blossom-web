@@ -18,7 +18,10 @@ export default function AdminReservas() {
         }
         return r.json();
       })
-      .then(d => setItems(d.items || []))
+      .then(d => {
+        console.log("Respuesta reservas API:", d);
+        setItems(d.items || []);
+      })
       .catch(e => {
         toast.error(e.message || "Error al cargar reservas");
       });

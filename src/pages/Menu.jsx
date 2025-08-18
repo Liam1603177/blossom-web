@@ -38,7 +38,15 @@ export default function Menu() {
     return () => { alive = false; };
   }, []);
 
-  if (loading) return <section className="menu-page"><h1>Nuestro Menú</h1><p>Cargando…</p></section>;
+  if (loading) return (
+    <section className="menu-page">
+      <h1>Nuestro Menú</h1>
+      <p>Cargando menú…</p>
+      <small style={{color:'#b77', display:'block', marginTop:8}}>
+        Si es la primera vez que accedés, puede demorar unos segundos mientras el servidor despierta.
+      </small>
+    </section>
+  );
   if (err) return <section className="menu-page"><h1>Nuestro Menú</h1><p>{err}</p></section>;
 
   return (
